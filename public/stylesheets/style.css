@@ -42,7 +42,7 @@ body {
 #hero {
   background-color: rgb(255, 239, 242);
   background-image: url("/images/homepage.jpg");
-  background-size cover;
+  background-size: cover;
   background-position: center;
   text-align: center;
   padding: 100px 20px;
@@ -61,4 +61,104 @@ body {
   max-width: 650px;
   margin: 0 auto 30px auto;
   text-shadow: 1px 2px 5px rgb(57, 55, 55);
+}
+
+/* hero button */
+.hero-button {
+  display: inline-block;
+  background-color: rgb(34, 38, 70);
+  color: rgb(255, 254, 254);
+  padding: 15px 35px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.hero-button:hover {
+  background-color: rgb(215, 150, 150);
+}
+
+/* event categories */
+
+#categories {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: rgb(254, 251, 239);
+}
+
+#categories h2 {
+  font-size: 32px;
+  color: rgb(34, 38, 70);
+  margin-bottom:20px;
+}
+
+#categories p {
+  font-size: 17px;
+  color: rgb(57, 55, 55);
+  margin-bottom: 35px;
+}
+
+.category {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  margin: 15px;
+  background-color: rgb(249, 250, 255);
+  border: 1px solid rgb(236, 221, 210);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.category img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.category h3 {
+  font-size: 18px;
+  color: rgb(34, 38, 70);
+  padding: 10px;
+}
+
+/* footer */
+#footer {
+  background-color: rgb(34, 38, 70);
+  color: rgb(255, 254, 254);
+  text-align: center;
+  padding: 25px;
+}
+
+#footer p {
+  margin: 0;
+}
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+  #navigation {
+    padding: 20px 10px;
+  }
+
+  #navigation a {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  #hero {
+    padding: 70px 20px;
+  }
+
+  #hero h2 {
+    font-size: 34px;
+  }
+
+  #hero p {
+    font-size: 16px;
+  }
+
+  .category {
+    width: 80%;
+    max-width: 300px;
+  }
 }
