@@ -1,11 +1,57 @@
+<!--
+Homepage for Curate 
+
+References: 
+- Course lecture slides and hands on material
+- stock images from pexels.com
+
+-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
-    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+    <title><%= title %> | Events Made Easy</title>
+
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
+
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <!-- header and navigation -->
+     <div id="navigation">
+      <!--curate web app name-->
+      <h1>Curate</h1>
+
+      <!-- navigation links-->
+       <a href="/">Home</a>
+       <a href="#categories">Event Categories</a>
+       <a href="/events/create">Create Event</a>
+     </div>
+
+     <!--hero section-->
+    <div id="hero"
+    <h2>Events Made Easy</h2>
+
+    <p>
+      Your next event starts here.
+      Plan, Organize and Celebrate with Curate.
+    </p>
+
+    <a href="/events/create" class="hero-button">
+      Create Your Event
+    </a>
+  </div>
+
+  <!--event categories-->
+  <div id="categories">
+    <h2>Explore Event Categories</h2>
+  </div>
+    </body>
+
+
+
+
   </body>
 </html>
