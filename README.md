@@ -4,10 +4,10 @@
 ## Project Overview 
 to be added soon
 
-## Technologies used
-- node.js
-- express.js
-- express generator
+## Technologies Used
+- Node.js
+- Express.js
+- Express generator
 - EJS
 - HTML
 - CSS
@@ -19,11 +19,13 @@ to be added soon
 to be added soon
 
 ## Team Members and Contribution
-Christina Bheir 
+### Christina Bheir 
 tba 
-Harrison Golden
+
+### Harrison Golden
 tba 
-Nerrosan Kajendiran
+
+### Nerrosan Kajendiran
 tba 
 
 ## Project Structure and Status
