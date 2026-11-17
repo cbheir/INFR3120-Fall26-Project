@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> - Curate</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/events">View Events</a>
+        <a href="/events/create">Create Event</a>
+    </nav>
+  <main class="events-page">
+    <h1><%= event.name %></h1>
+
+    <p><strong>Date:</strong> <%= event.date %></p>
+    <p><strong>Location:</strong> <%= event.location %></p>
+    <p><strong>Description:</strong> <%= event.description %></p>
+
+    
+    <!-- Link to edit the selected event -->
+    <a href="/events/<%= event.id %>/edit">Edit Event</a>
+
+    <!-- Form to delete the selected event -->
+    <form action="/events/<%= event.id %>/delete"
+        method="POST"
+        onsubmit="return confirm('Are you sure you want to delete this event?');">
+
+    <button type="submit" class="delete-button">
+        Delete Event
+    </button>
+
+    </form>
+
+    <!-- Return to the event listing -->
+    <a href="/events">Back to Events</a>
+
+  </main>
+</body>
+</html>

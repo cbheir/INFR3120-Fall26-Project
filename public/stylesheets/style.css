@@ -184,3 +184,105 @@ body {
     max-width: 300px;
   }
 }
+
+
+/* Event listing page */
+.events-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.events-page h1 {
+  margin-bottom: 10px;
+}
+
+/* Event table */
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+
+.events-table th,
+.events-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.events-table th {
+  background-color: #24334d;
+  color: white;
+}
+
+.events-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.events-table tr:hover {
+  background-color: #e5e5e5;
+}
+
+
+/* Edit Event Form */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.events-page button {
+  background-color: #24334d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.events-page button:hover {
+  background-color: #364b70;
+}
+
+.events-page form a {
+  margin-left: 15px;
+}
+
+
+/* Delete Event Button */
+
+.events-page .delete-button {
+  background-color: #c0392b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.events-page .delete-button:hover {
+  background-color: #922b21;
+}

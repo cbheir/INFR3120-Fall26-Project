@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <!-- curate navigation -->
+     <div id = "navigation">
+        <a href="/" class="logo-link">
+            <img src="/images/main logo.png" alt="Curate Logo" class="curate-logo">
+        </a>
+        
+        <a href="/">Home</a>
+        <a href="/events">View Events</a>
+        <a href="/events/create">Create Event</a>
+    </div>
+
+    <main class="events-page">
+        <h1>Upcoming Events</h1>
+        <p>Browse events planned with Curate</p>
+
+    <!-- Display events in a table -->
+    <table class="events-table">
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% events.forEach(function(event) { %>
+          <tr>
+            <td>
+                <a href="/events/<%= event.id %>">
+                    <%= event.name %>
+                </a>
+            </td>
+            <td><%= event.date %></td>
+            <td><%= event.location %></td>
+            <td><%= event.description %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
