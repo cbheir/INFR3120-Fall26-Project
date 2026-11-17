@@ -39,6 +39,19 @@ body {
   color: rgb(215, 150, 150);
 }
 
+/* curate logo */
+.logo-link{
+  display:block;
+  margin-bottom: 12px;
+}
+
+.curate-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 #hero {
   background-color: rgb(255, 239, 242);
   background-image: 
