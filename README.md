@@ -31,6 +31,7 @@ tba
 - Added functionality to delete an event and redirect the user to the event listing page
 - Added CSS styling for the events table, edit form, and delete button
 - Added navigation links to existing pages to allow users to access the event listing and related pages
+- Responsible for configuring and deploying our project to render
 
 ### Nerrosan Kajendiran
 tba 
