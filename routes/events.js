@@ -34,7 +34,12 @@ router.get('/', function(req, res, next) {
     events: events
   });
 });
-
+// Show the page to create an event
+router.get('/create', function(req, res, next) {
+  res.render('createEvent', {
+    title: 'Create Event'
+  });
+});
 // Display details for one event
 router.get('/:id', function(req, res, next) {
   let selectedEvent = events.find(function(event) {
@@ -125,5 +130,30 @@ router.post('/:id/delete', function(req, res, next) {
   res.redirect('/events');
 
 });
+// This is used to save an event which is prompted by user
+router.post('/create', function(req, res, next) {
+  if (!req.body.name || !req.body.date ||
+      !req.body.location || !req.body.description) {
+    return res.status(400).send('Must Fill Out Everything!');
+  }
 
+  let IdNew = 1;
+
+  events.forEach(function(event) {
+    if (event.id >= IdNew) {
+      IdNew = event.id + 1;
+    }
+  });
+
+  let EventNew = {
+    id: IdNew,
+    name: req.body.name,
+    date: req.body.date,
+    location: req.body.location,
+    description: req.body.description
+  };
+
+  events.push(EventNew);
+  res.redirect('/events');
+});
 module.exports = router;
