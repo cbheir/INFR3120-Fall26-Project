@@ -40,4 +40,14 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+let mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGODB_URI)
+    .then(function() {
+        console.log('MongoDB connected successfully');
+    })
+    .catch(function(error) {
+        console.log('MongoDB connection failed:', error.message);
+    });
+
 module.exports = app;
