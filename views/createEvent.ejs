@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= title %> | Curate</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+
+    <body>
+        <div id="navigation">
+
+      <!--curate logo-->
+      <a href="/" class="logo-link">
+        <img src="/images/main%20logo.png"
+             alt="Curate Events Made Easy Logo"
+             class="curate-logo">
+      </a>
+
+            <a href="/">Home</a>
+            <a href="/events/create">Create Event</a>
+            <a href="/events">View Events</a>
+
+            <div id="categories">
+                <h2>Create Your Event</h2>
+<form action="/events/create" method="POST">
+    <label for="name">Event Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="date">Event Date:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <button type="submit">Create Event</button>
+</form>
+                <a href="/">Return to Homepage</a>
+            </div>
+        </div>
+    </body>
+</html>
