@@ -1,6 +1,7 @@
 
 let express = require('express');
 let router = express.Router();
+const Event = require('../Models/Events');
 
 // Temporary event data
 let events = [
@@ -28,11 +29,17 @@ let events = [
 ];
 
 // Display all events
-router.get('/', function(req, res, next) {
-  res.render('events', {
-    title: 'Curate Events',
-    events: events
-  });
+router.get('/', async function(req, res, next) {
+  try {
+    let events = await Event.find();
+
+    res.render('events', {
+      title: 'Curate Events',
+      events: events
+    });
+  } catch (err) {
+    next(err);
+  }
 });
 // Show the page to create an event
 router.get('/create', function(req, res, next) {
@@ -131,7 +138,7 @@ router.post('/:id/delete', function(req, res, next) {
 
 });
 // This is used to save an event which is prompted by user
-router.post('/create', function(req, res, next) {
+router.post('/create', async function(req, res, next) {
   if (!req.body.name || !req.body.date ||
       !req.body.location || !req.body.description) {
     return res.status(400).send('Must Fill Out Everything!');
@@ -153,7 +160,7 @@ router.post('/create', function(req, res, next) {
     description: req.body.description
   };
 
-  events.push(EventNew);
+  await Event.create(EventNew);
   res.redirect('/events');
 });
 module.exports = router;
