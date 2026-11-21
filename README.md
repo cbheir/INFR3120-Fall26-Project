@@ -60,6 +60,13 @@ The development process behind Curate includes the use of Node.js, Express.js, E
 - Redirecting was added to the events listing page post event is addition
 
 ## Links
+
+## Github Repository Link
+https://github.com/cbheir/INFR3120-Fall26-Project.git 
+
+## Deployed Render Website Link
+https://infr3120-fall26-project-rm49.onrender.com	
+
 - Harrison Golden
     - https://expressjs.com/en/5x/guide/routing/
 
